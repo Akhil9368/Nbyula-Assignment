@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  .jumbotron{
+    margin-bottom: 0px;
+  }
+
+</style>
+<body style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));">
+  {% include "quiz/navbar.html" %}
+<br>r>
+
+<section id="section-jumbotron" class=" jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <br>
+    <h1 class="display-1 text-danger font-weight-bold"> Welcome to Quizzr</h1>
+    <p class="display-4 d-none d-sm-block"> Test your Knowledges and get a Chance to good Job.</p>
+    <p class="lead">We organize quizzes on · Competitive exams · Prepare for · Class 6 to 12 ·</p>
+
+    
+
+    <p class="lead">Sign up if you haven't already and get access to millions of quizzes on the topic of your interest.</p>
+    <p><strong> Start Your Journey Here:</strong></p>
+    <a href="/student/studentsignup" class="btn btn-sm btn-secondary" style="padding-right: 35px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+    
+    <br><br><br>
+  </div>  
+</section>
+  {% include "quiz/footer.html" %}
+
+
+</body>
+
+</html>

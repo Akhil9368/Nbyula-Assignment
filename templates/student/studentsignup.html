@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 50px; 
+          
+        }
+        .box {
+          width: 500px;
+          padding: 40px;
+          position: absolute;
+          top:0;
+          left: 30%;
+          background: #202020;
+      
+          text-align: center;
+          transition: 0.25s;
+          margin-top: 100px
+      }
+    </style>
+  </head>
+  <body style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));">
+    {% include "quiz/navbar.html" %}
+ 
+
+
+<br><br><br>
+
+<section  >
+<form class="box" method="POST" autocomplete="off" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <h1 style="text-align:center; color:white; text:font-weight-bold;">STUDENT SIGNUP</h1>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="username"class="font-weight-bold text-white" >Username</label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4"class="font-weight-bold text-white">Password</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first_name"class="font-weight-bold text-white">First Name</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last_name"class="font-weight-bold text-white">Last Name</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="mobile"class="font-weight-bold text-white">Mobile</label>
+          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Mobile" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="address"class="font-weight-bold text-white">Address</label>
+          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="profile_pic"class="font-weight-bold text-white">Profile Picture</label>
+          {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
+        </div>
+        
+      </div>
+
+
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</section>
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+
+  </body>
+</html>
